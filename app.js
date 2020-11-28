@@ -1,5 +1,5 @@
 
-const RESPONSES = ["c", "b", "d", "a", "a"];
+const RESPONSES = ["c", "b", "d", "a", "b"];
 let userResponses = [];
 let checkArray = [];
 
@@ -7,6 +7,7 @@ const FORM = document.querySelector(".formulaire");
 const TITLERESULT = document.querySelector("h2");
 const HELPRESULT = document.querySelector(".aide");
 const NOTERESULT = document.querySelector(".note");
+const LINKRESULT = document.querySelector(".link");
 const ALLQUESTION = document.querySelectorAll(".question-block");
 
 /** Des que l'utilisateur soumet le formulaire grâce à l'EVENTLISTENER */
@@ -60,31 +61,43 @@ function displayResult(array) {
 			TITLERESULT.innerText = "✅✅ Bravo c'est un sans faute ! ✅✅";
 			HELPRESULT.innerText = "respect";
 			NOTERESULT.innerText = "5/5";
+			LINKRESULT.classList.remove("hide");
+			LINKRESULT.classList.add("visible");
 			break;
 		case 1:
 			TITLERESULT.innerText = "✅😖 Vous y êtes presque! 😖✅";
 			HELPRESULT.innerText = "Retentez votre chance";
 			NOTERESULT.innerText = "4/5";
+			LINKRESULT.classList.remove("visible");
+			LINKRESULT.classList.add("hide");
 			break;
 		case 2:
 			TITLERESULT.innerText = "😖 T'as la moyenne ! 😖";
 			HELPRESULT.innerText = "Ne t'arrête pas là";
 			NOTERESULT.innerText = "3/5";
+			LINKRESULT.classList.remove("visible");
+			LINKRESULT.classList.add("hide");
 			break;
 		case 3:
 			TITLERESULT.innerText = "❌😖 Bof bof ! 😖❌";
 			HELPRESULT.innerText = "Retente, tu n'as rien à perdre";
 			NOTERESULT.innerText = "2/5";
+			LINKRESULT.classList.remove("visible");
+			LINKRESULT.classList.add("hide");
 			break;
 		case 4:
 			TITLERESULT.innerText = "❌❌😖 Oulala c'est pas jojo ! 😖❌❌";
 			HELPRESULT.innerText = "Va boire un café et reviens après";
 			NOTERESULT.innerText = "1/5";
+			LINKRESULT.classList.remove("visible");
+			LINKRESULT.classList.add("hide");
 			break;
 		case 5:
 			TITLERESULT.innerText = "❌❌❌ Arrête tout ! ❌❌❌";
 			HELPRESULT.innerText = "Va boire un café et ne reviens pas";
 			NOTERESULT.innerText = "0/5";
+			LINKRESULT.classList.remove("visible");
+			LINKRESULT.classList.add("hide");
 			break;
 		default:
 			"Oups, cas innatendu";

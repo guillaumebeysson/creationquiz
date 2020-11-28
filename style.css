@@ -11,6 +11,21 @@ body {
 	background-image: url(./image/bg2clair2.png);
 }
 
+#niveau2color h1{
+	background-color: #c39dda;
+}
+
+#niveau3color h1{
+	background-color: #dac383;
+}
+
+#niveau4color h1{
+	background-color: #83dac4;
+}
+
+#niveau5color h1{
+	background-color: #cc996f;
+}
 
 h1 {
     background-color: #88B0C6;
@@ -112,11 +127,43 @@ strong{
 	transition: all 0.4s ease-in-out;
 }
 
+#niveau2color .question-block {
+	background-color: #c39ddad3;
+}
+
+#niveau3color .question-block {
+	background-color: #dac383d5;
+}
+
+#niveau4color .question-block {
+	background-color: #83dac4ce;
+}
+
+#niveau5color .question-block {
+	background-color: #cc996fd8;
+}
+
 .question-block:hover{
 	/*width: 500px;*/
 	background-color: #88B0C6;
 	box-shadow: 0 2px 30px rgb(255, 255, 255);
 	border-radius: 0;
+}
+
+#niveau2color .question-block:hover {
+	background-color: #c39dda;
+}
+
+#niveau3color .question-block:hover {
+	background-color: #dac383;
+}
+
+#niveau4color .question-block:hover {
+	background-color: #83dac4;
+}
+
+#niveau5color .question-block:hover {
+	background-color: #cc996f;
 }
 
 .question-block h4 {
@@ -130,6 +177,8 @@ strong{
 	padding: 10px 0;
 	font-size: 22px;
 }
+
+
 
 .question-block:hover h4{
 	font-size: 30px;
@@ -193,19 +242,30 @@ strong{
 	cursor: pointer;
     width: 500px;
     background-color: #88B0C6;
-	
-	border-radius: 5px;
+	border-radius: 20px;
+	border: 2px solid white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     align-items: center;
 }
 
-.resultats h2 {
-	text-align: center;
+#niveau2color .resultats{
+	background-color: #c39dda;
 }
 
-.resultats{
-	border-radius: 20px;
-	border: 2px solid white;
+#niveau3color .resultats{
+	background-color: #dac383;
+}
+
+#niveau4color .resultats{
+	background-color: #83dac4;
+}
+
+#niveau5color .resultats{
+	background-color: #cc996f;
+}
+
+.resultats h2 {
+	text-align: center;
 }
 
 .aide,
@@ -240,6 +300,22 @@ button {
 	font-family: "comic sans ms";
 }
 
+#niveau2color button{
+	background-color: #c39dda;
+}
+
+#niveau3color button{
+	background-color: #dac383;
+}
+
+#niveau4color button{
+	background-color: #83dac4;
+}
+
+#niveau5color button{
+	background-color: #cc996f;
+}
+
 button:hover {
 	width: 350px;
 	background-color: white;
@@ -266,4 +342,30 @@ button:hover {
 	100% {
 		transform: translateX(0px);
 	}
+}
+
+.resultats .link{
+	display: table;
+	text-align: center;
+	font-size: 30px;
+	margin: 10px auto 0;
+	color: rgb(251, 251, 251);
+	font-family: "comic sans ms";
+	text-decoration: none;
+	border: 3px solid #ffffff;
+	border-radius: 30px;
+	padding: 0.5em 0.5em;
+}
+
+.resultats .link:hover{
+	background-color: #ffffff;
+	color: #3286b4;
+}
+
+a.link.hide{
+	display: none;
+}
+
+a.link.visible{
+	display: block;
 }
